@@ -1,0 +1,22 @@
+<%= form_for(page) do |f| %>
+	<div class="field">
+		<%= f.label :title %> <br />
+		<%= f.text_field :title %>
+	</div>
+
+	<div class="field">
+		<%= f.label :body %> <br />
+		<%= f.text_area :body %>
+	</div>
+
+	<div class="field">
+		<%= f.label :slug %> <br />
+		<%= f.text_field :slug %>
+	</div>
+	<br />
+
+	<%= form.hidden_field :active, value: "false" %>
+	<div>
+		<%= f.submit %>
+	</div>
+<% end %>
